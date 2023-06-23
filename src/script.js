@@ -164,8 +164,13 @@ function createChat() {
     chatFooter.classList.add('chat-footer');
     chatFooter.innerHTML = `
     <input type="text" class="chat-input" placeholder="Digite sua mensagem...">
-    <button onclick="sendMessage()">Enviar</button>
   `;
+    const buttonSendMessage = document.createElement("button");
+    buttonSendMessage.innerText = "Enviar";
+
+    chatFooter.appendChild(buttonSendMessage);
+    buttonSendMessage.addEventListener('click', sendMessage)
+
 
     // Adiciona os elementos ao chat
     chatContainer.appendChild(chatHeader);
