@@ -150,8 +150,10 @@ function createChat() {
     chatHeader.classList.add('chat-header');
     chatHeader.innerHTML = `
     <h3>Chat</h3>
-    <div class="close-icon" onclick="toggleChat()">X</div>
   `;
+
+    // Adiciona o evento de clique ao fechar chat-toggle
+    chatHeader.addEventListener('click', toggleChat);
 
     // Cria o corpo do chat
     const chatBody = document.createElement('div');
